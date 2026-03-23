@@ -69,7 +69,7 @@ bool samePoint( Point p1, Point p2 ) {
 
     float dy = fabs(p1.y - p2.y);
 
-    return p1.x==p2.x||p1.y==p2.y;
+    return p1.x==p2.x && p1.y==p2.y;
 }
 
 bool pointInLine( Point p, Line l) {
