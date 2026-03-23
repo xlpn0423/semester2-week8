@@ -41,9 +41,9 @@ Triangle makeTriangle( Point p1, Point p2, Point p3 ) {
 
 float lineLength( Line l ) {
 
-   float dx = p1.x + p2.x;
+   float dx = l.p[0].x + l.p[1].x;
 
-   float dy = p1.y + p2.y;
+   float dy = l.p[0].y + l.p[1].y;
 
    return sqrt(dx*dx+dy*dy);
 }
@@ -77,7 +77,7 @@ bool pointInLine( Point p, Line l) {
 }
 
 bool pointInTriangle( Point p, Triangle t ) {
-    return samePoint(p,t.p[0]) || samePoint(p,t.p[1] || samePoint(p,t.p[2]);
+    return samePoint(p,t.p[0]) || samePoint(p,t.p[1]) || samePoint(p,t.p[2]);
 }
 // complete other functions below
 // - start with stubs as above
